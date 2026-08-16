@@ -7,7 +7,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 SECRET_KEY = 'django-insecure-local-development-only-change-in-production'
 DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "event-countdown-timer-production.up.railway.app",
+    "localhost",
+    "127.0.0.1",
+]
 
 # Application definition
 INSTALLED_APPS = [
@@ -99,4 +103,6 @@ SIMPLE_JWT = {
 # Allow connections from your React server
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
+    "https://event-countdown-timer-ashy.vercel.app",
 ]
+
