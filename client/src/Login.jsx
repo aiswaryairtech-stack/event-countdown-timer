@@ -18,8 +18,15 @@ export default function Login() {
       // Login successful
       navigate("/");
     } catch (err) {
-      alert("Invalid username or password.");
-    }
+  console.log("LOGIN ERROR:", err);
+  console.log("STATUS:", err.response?.status);
+  console.log("DATA:", err.response?.data);
+
+  alert(
+    `Login failed: ${err.response?.status || "Unknown"}\n` +
+    `${JSON.stringify(err.response?.data || err.message)}`
+  );
+}
   };
 
   return (
