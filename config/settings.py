@@ -6,7 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 SECRET_KEY = 'django-insecure-local-development-only-change-in-production'
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = [
     "event-countdown-timer-production.up.railway.app",
     "localhost",
