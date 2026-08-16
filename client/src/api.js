@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "http://127.0.0.1:8000",
+    baseURL: "https://event-countdown-timer-production.up.railway.app",
 });
 
 // Automatically attach Access Token
@@ -51,7 +51,7 @@ api.interceptors.response.use(
             try {
                 // Ask Django for a new access token
                 const response = await axios.post(
-                    "http://127.0.0.1:8000/api/token/refresh/",
+                    "https://event-countdown-timer-production.up.railway.app/api/token/refresh/",
                     {
                         refresh: refreshToken,
                     }
